@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  ToDoIt
+//  ToDoIT
 //
 //  Created by Laura Garcia on 10/11/2020.
 //
@@ -24,17 +24,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        table.delegate = self
+        table.dataSource = self
     }
     
     //MARK: - TableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        //something
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        cell?.textLabel?.text = data[indexPath.row].item
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

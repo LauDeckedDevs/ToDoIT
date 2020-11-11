@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  ToDoIt
+//  ToDoIT
 //
 //  Created by Laura Garcia on 10/11/2020.
 //

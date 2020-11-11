@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -50,7 +50,6 @@
 				D24A0DF91ECF46CB3FD52BBB /* Pods-ToDoIT.debug.xcconfig */,
 				1EB2DEC4CCD9C5369AEDB9BA /* Pods-ToDoIT.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -60,6 +59,33 @@
 				8DC650C0FA6B018EFB07E6C1 /* Pods_ToDoIT.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		542A51C4255C24E00009596B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				547430DC255AC90700CB2A03 /* AppDelegate.swift */,
+				547430DE255AC90700CB2A03 /* SceneDelegate.swift */,
+				547430E0255AC90700CB2A03 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		542A51C6255C24FE0009596B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				547430E2255AC90700CB2A03 /* Main.storyboard */,
+				547430EA255AC90A00CB2A03 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		542A51C7255C25060009596B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				547430E5255AC90700CB2A03 /* ToDoIt.xcdatamodeld */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		547430D0255AC90700CB2A03 = {
@@ -83,14 +109,11 @@
 		547430DB255AC90700CB2A03 /* ToDoIT */ = {
 			isa = PBXGroup;
 			children = (
-				547430DC255AC90700CB2A03 /* AppDelegate.swift */,
-				547430DE255AC90700CB2A03 /* SceneDelegate.swift */,
-				547430E0255AC90700CB2A03 /* ViewController.swift */,
-				547430E2255AC90700CB2A03 /* Main.storyboard */,
-				547430E8255AC90A00CB2A03 /* Assets.xcassets */,
-				547430EA255AC90A00CB2A03 /* LaunchScreen.storyboard */,
+				542A51C4255C24E00009596B /* Controller */,
+				542A51C7255C25060009596B /* Model */,
+				542A51C6255C24FE0009596B /* View */,
 				547430ED255AC90A00CB2A03 /* Info.plist */,
-				547430E5255AC90700CB2A03 /* ToDoIt.xcdatamodeld */,
+				547430E8255AC90A00CB2A03 /* Assets.xcassets */,
 			);
 			path = ToDoIT;
 			sourceTree = "<group>";
