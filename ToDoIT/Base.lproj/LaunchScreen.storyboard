@@ -19,14 +19,25 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="UOk-iT-vfn">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="KrZ-Ml-zYp">
+                                <rect key="frame" x="64" y="313" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="6oe-8b-HTj"/>
+                                    <constraint firstAttribute="width" constant="300" id="Ozn-1f-sGP"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KrZ-Ml-zYp" secondAttribute="bottom" constant="279" id="5lk-qE-mL8"/>
                             <constraint firstItem="UOk-iT-vfn" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="6V3-wn-aCH"/>
+                            <constraint firstItem="KrZ-Ml-zYp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="269" id="Hcz-qZ-hHn"/>
                             <constraint firstItem="UOk-iT-vfn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PE1-G4-Qoe"/>
                             <constraint firstItem="UOk-iT-vfn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Tsb-5c-coe"/>
                             <constraint firstAttribute="bottom" secondItem="UOk-iT-vfn" secondAttribute="bottom" id="Urv-ti-hFp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KrZ-Ml-zYp" secondAttribute="trailing" constant="64" id="qfB-ua-yjB"/>
+                            <constraint firstItem="KrZ-Ml-zYp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="xxH-FE-BGb"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,6 +47,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="logo" width="192.66667175292969" height="247.33332824707031"/>
         <image name="wallpaper" width="428" height="926"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		547430D9255AC90700CB2A03 /* ToDoIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		547430D9255AC90700CB2A03 /* ToDoIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		547430DC255AC90700CB2A03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		547430DE255AC90700CB2A03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		547430E0255AC90700CB2A03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		547430DA255AC90700CB2A03 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				547430D9255AC90700CB2A03 /* ToDoIt.app */,
+				547430D9255AC90700CB2A03 /* ToDoIT.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		547430D8255AC90700CB2A03 /* ToDoIt */ = {
+		547430D8255AC90700CB2A03 /* ToDoIT */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 547430F0255AC90A00CB2A03 /* Build configuration list for PBXNativeTarget "ToDoIt" */;
+			buildConfigurationList = 547430F0255AC90A00CB2A03 /* Build configuration list for PBXNativeTarget "ToDoIT" */;
 			buildPhases = (
 				547430D5255AC90700CB2A03 /* Sources */,
 				547430D6255AC90700CB2A03 /* Frameworks */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = ToDoIt;
+			name = ToDoIT;
 			productName = ToDoIt;
-			productReference = 547430D9255AC90700CB2A03 /* ToDoIt.app */;
+			productReference = 547430D9255AC90700CB2A03 /* ToDoIT.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +104,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 547430D4255AC90700CB2A03 /* Build configuration list for PBXProject "ToDoIt" */;
+			buildConfigurationList = 547430D4255AC90700CB2A03 /* Build configuration list for PBXProject "ToDoIT" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,7 +117,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				547430D8255AC90700CB2A03 /* ToDoIt */,
+				547430D8255AC90700CB2A03 /* ToDoIT */,
 			);
 		};
 /* End PBXProject section */
@@ -297,7 +297,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.laudecked.ToDoIt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laudecked.ToDoITapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -316,7 +316,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.laudecked.ToDoIt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laudecked.ToDoITapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -326,7 +326,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		547430D4255AC90700CB2A03 /* Build configuration list for PBXProject "ToDoIt" */ = {
+		547430D4255AC90700CB2A03 /* Build configuration list for PBXProject "ToDoIT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				547430EE255AC90A00CB2A03 /* Debug */,
@@ -335,7 +335,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		547430F0255AC90A00CB2A03 /* Build configuration list for PBXNativeTarget "ToDoIt" */ = {
+		547430F0255AC90A00CB2A03 /* Build configuration list for PBXNativeTarget "ToDoIT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				547430F1255AC90A00CB2A03 /* Debug */,
