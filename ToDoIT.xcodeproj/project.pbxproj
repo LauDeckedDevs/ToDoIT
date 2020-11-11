@@ -42,7 +42,7 @@
 		547430D0255AC90700CB2A03 = {
 			isa = PBXGroup;
 			children = (
-				547430DB255AC90700CB2A03 /* ToDoIt */,
+				547430DB255AC90700CB2A03 /* ToDoIT */,
 				547430DA255AC90700CB2A03 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,7 +55,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		547430DB255AC90700CB2A03 /* ToDoIt */ = {
+		547430DB255AC90700CB2A03 /* ToDoIT */ = {
 			isa = PBXGroup;
 			children = (
 				547430DC255AC90700CB2A03 /* AppDelegate.swift */,
@@ -67,7 +67,7 @@
 				547430ED255AC90A00CB2A03 /* Info.plist */,
 				547430E5255AC90700CB2A03 /* ToDoIt.xcdatamodeld */,
 			);
-			path = ToDoIt;
+			path = ToDoIT;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
