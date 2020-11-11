@@ -19,7 +19,7 @@
                         <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections/>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ToDos" largeTitleDisplayMode="always" id="Yr3-3P-LJe"/>
+                    <navigationItem key="navigationItem" title="ToDo List" largeTitleDisplayMode="always" id="Yr3-3P-LJe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <navigationItem title="ToDos" largeTitleDisplayMode="always" id="fnM-uH-isL"/>
