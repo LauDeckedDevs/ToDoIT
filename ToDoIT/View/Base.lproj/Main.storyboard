@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Yh-4Y-LVI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jnr-HS-j8o">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,47 +13,187 @@
         <!--ToDos-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="ToDos" id="BYZ-38-t0r" customClass="UITableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="12" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="l8x-T5-aWq">
+                <viewController title="ToDos" id="BYZ-38-t0r" customClass="ViewController" customModule="ToDoIT" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4aA-FJ-FFC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections/>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ToDo List" largeTitleDisplayMode="always" id="Yr3-3P-LJe"/>
+                    <navigationItem key="navigationItem" title="ToDo List" largeTitleDisplayMode="always" id="Yr3-3P-LJe">
+                        <barButtonItem key="rightBarButtonItem" image="AddTodo" id="qpY-6g-cBh">
+                            <connections>
+                                <action selector="DidTapAddButton" destination="BYZ-38-t0r" id="E3x-O5-seQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="table" destination="4aA-FJ-FFC" id="56t-qC-5wN"/>
+                        <segue destination="lRK-Od-Lij" kind="presentation" identifier="newTodoView" id="oYA-sq-7Q1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <navigationItem title="ToDos" largeTitleDisplayMode="always" id="fnM-uH-isL"/>
             </objects>
-            <point key="canvasLocation" x="-447.69230769230768" y="39.810426540284361"/>
+            <point key="canvasLocation" x="-63" y="458"/>
+        </scene>
+        <!--New ToDo-->
+        <scene sceneID="Psj-nT-zKw">
+            <objects>
+                <viewController id="7x3-rd-LzT" customClass="EntryViewController" customModule="ToDoIT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7e8-78-aeO">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of the task" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OZT-cL-fNI">
+                                <rect key="frame" x="73" y="140" width="301" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="JNc-4i-2oe"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="301" id="q6H-un-100"/>
+                                </constraints>
+                                <color key="textColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCC-IM-VRd">
+                                <rect key="frame" x="151" y="266" width="88" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="jqh-vT-8Nk"/>
+                                    <constraint firstAttribute="height" constant="46" id="lp3-9U-OpZ"/>
+                                </constraints>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="square.and.arrow.down.on.square.fill" catalog="system" symbolScale="large" renderingMode="template"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapSaveButton" destination="7x3-rd-LzT" eventType="touchUpInside" id="f4o-as-Zrz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wh0-AQ-UDD">
+                                <rect key="frame" x="16" y="143" width="55" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="55" id="03r-Sv-bA7"/>
+                                    <constraint firstAttribute="height" constant="29" id="gm3-Q5-rCS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="21"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQG-Tw-wzF">
+                                <rect key="frame" x="16" y="190" width="68" height="52"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="21"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="OQi-rH-4La">
+                                <rect key="frame" x="90" y="190" width="284" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="78M-mX-edn"/>
+                                    <constraint firstAttribute="height" constant="52" id="nqG-Wn-BQ5"/>
+                                </constraints>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aUy-CQ-GgW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yCC-IM-VRd" firstAttribute="top" secondItem="OQi-rH-4La" secondAttribute="bottom" constant="24" id="0qN-Ja-DW0"/>
+                            <constraint firstItem="SQG-Tw-wzF" firstAttribute="leading" secondItem="Wh0-AQ-UDD" secondAttribute="leading" id="4Yw-j8-6Ut"/>
+                            <constraint firstItem="Wh0-AQ-UDD" firstAttribute="leading" secondItem="aUy-CQ-GgW" secondAttribute="leading" constant="16" id="8b8-Xg-MCn"/>
+                            <constraint firstItem="SQG-Tw-wzF" firstAttribute="bottom" secondItem="OQi-rH-4La" secondAttribute="bottom" id="Ed1-nR-xbP"/>
+                            <constraint firstItem="OQi-rH-4La" firstAttribute="leading" secondItem="SQG-Tw-wzF" secondAttribute="trailing" constant="6" id="GhT-Ee-ddN"/>
+                            <constraint firstItem="OQi-rH-4La" firstAttribute="top" secondItem="OZT-cL-fNI" secondAttribute="bottom" constant="16" id="IUi-KC-FrE"/>
+                            <constraint firstItem="aUy-CQ-GgW" firstAttribute="trailing" secondItem="OQi-rH-4La" secondAttribute="trailing" constant="16" id="P34-hC-4dp"/>
+                            <constraint firstItem="SQG-Tw-wzF" firstAttribute="top" secondItem="OQi-rH-4La" secondAttribute="top" id="TfO-FB-pcA"/>
+                            <constraint firstItem="yCC-IM-VRd" firstAttribute="centerX" secondItem="7e8-78-aeO" secondAttribute="centerX" id="hEZ-3x-AR1"/>
+                            <constraint firstItem="OZT-cL-fNI" firstAttribute="top" secondItem="aUy-CQ-GgW" secondAttribute="top" constant="31" id="lhb-VD-5bn"/>
+                            <constraint firstItem="OZT-cL-fNI" firstAttribute="leading" secondItem="Wh0-AQ-UDD" secondAttribute="trailing" constant="2" id="nfY-ha-sqN"/>
+                            <constraint firstItem="Wh0-AQ-UDD" firstAttribute="top" secondItem="aUy-CQ-GgW" secondAttribute="top" constant="34" id="uPC-1N-rMg"/>
+                            <constraint firstItem="aUy-CQ-GgW" firstAttribute="trailing" secondItem="OZT-cL-fNI" secondAttribute="trailing" constant="16" id="vLu-8e-HQu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New ToDo" id="5IS-ya-FDz"/>
+                    <connections>
+                        <outlet property="datePicker" destination="OQi-rH-4La" id="qNs-6h-EUu"/>
+                        <outlet property="textField" destination="OZT-cL-fNI" id="Oj1-i5-9dQ"/>
+                        <segue destination="Jnr-HS-j8o" kind="presentation" identifier="ToDosView" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="xeS-mI-rZ1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vq3-WE-LMk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869" y="458"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="2bi-El-5H5">
+            <objects>
+                <viewController id="xfw-o3-ZYX" customClass="DetailViewController" customModule="ToDoIT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W9g-1L-3v2">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="z1O-3B-KM6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="Jnr-HS-j8o" kind="presentation" identifier="return" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="dzx-p9-1iU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UrO-Ia-3i9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2005" y="458"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="gBx-0T-ovv">
+        <scene sceneID="xYg-Jq-6s1">
             <objects>
-                <navigationController id="0Yh-4Y-LVI" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="0nT-5s-jiD">
-                        <rect key="frame" x="0.0" y="44" width="390" height="98"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DhJ-fF-qjW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="enter" id="lRK-Od-Lij" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="eSp-pH-AbJ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Zsv-9G-UU3">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="109"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="19"/>
                             <color key="textColor" name="AccentColor"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="38"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="37"/>
                             <color key="textColor" name="AccentColor"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="76V-C7-0zR"/>
+                        <segue destination="7x3-rd-LzT" kind="relationship" relationship="rootViewController" id="TCM-5O-D5H"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eKe-Ii-tSM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-843" y="40"/>
+            <point key="canvasLocation" x="645" y="458"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZJc-m5-RYe">
+            <objects>
+                <navigationController id="Jnr-HS-j8o" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pjV-Y7-UGO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="fem-GN-U71">
+                        <rect key="frame" x="0.0" y="44" width="390" height="97"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="AccentColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="37"/>
+                            <color key="textColor" name="AccentColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0vT-bc-HLc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3TP-3I-nLm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-794" y="458"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xeS-mI-rZ1"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="AddTodo" width="68" height="68"/>
+        <image name="square.and.arrow.down.on.square.fill" catalog="system" width="122" height="128"/>
         <namedColor name="AccentColor">
             <color red="0.98400002717971802" green="0.55299997329711914" blue="0.55299997329711914" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

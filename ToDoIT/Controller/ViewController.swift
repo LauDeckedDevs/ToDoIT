@@ -21,9 +21,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet var table: UITableView!
     private var data = [ToDoListItem]()
-
+    private let realm = try! Realm()
+    
+    //MARK: - View
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        data = realm.objects(ToDoListItem.self).map({ $0 })
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         table.delegate = self
         table.dataSource = self
@@ -44,6 +48,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    //MARK: - TappedAddButton
+    
+    @IBAction func DidTapAddButton() {
+        performSegue(withIdentifier: "newTodoView", sender: Any?.self)
+        refresh()
+    }
+    //MARK: - RefreshingRealm
+    
+    func refresh() {
+        data = realm.objects(ToDoListItem.self).map({ $0 })
+        table.reloadData()
     }
 }
 

@@ -14,6 +14,8 @@
 		547430E7255AC90700CB2A03 /* ToDoIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 547430E5255AC90700CB2A03 /* ToDoIt.xcdatamodeld */; };
 		547430E9255AC90A00CB2A03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 547430E8255AC90A00CB2A03 /* Assets.xcassets */; };
 		547430EC255AC90A00CB2A03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 547430EA255AC90A00CB2A03 /* LaunchScreen.storyboard */; };
+		547AA4F5255D81C800EDEF9D /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547AA4F4255D81C800EDEF9D /* EntryViewController.swift */; };
+		547AA4F8255D81E400EDEF9D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547AA4F7255D81E400EDEF9D /* DetailViewController.swift */; };
 		6206A0917948377B7D0757B8 /* Pods_ToDoIT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC650C0FA6B018EFB07E6C1 /* Pods_ToDoIT.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		547430E8255AC90A00CB2A03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		547430EB255AC90A00CB2A03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		547430ED255AC90A00CB2A03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		547AA4F4255D81C800EDEF9D /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EntryViewController.swift; path = ToDoIT/Controller/EntryViewController.swift; sourceTree = SOURCE_ROOT; };
+		547AA4F7255D81E400EDEF9D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ToDoIT/Controller/DetailViewController.swift; sourceTree = SOURCE_ROOT; };
 		8DC650C0FA6B018EFB07E6C1 /* Pods_ToDoIT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDoIT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D24A0DF91ECF46CB3FD52BBB /* Pods-ToDoIT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoIT.debug.xcconfig"; path = "Target Support Files/Pods-ToDoIT/Pods-ToDoIT.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +70,8 @@
 			children = (
 				547430DC255AC90700CB2A03 /* AppDelegate.swift */,
 				547430DE255AC90700CB2A03 /* SceneDelegate.swift */,
+				547AA4F7255D81E400EDEF9D /* DetailViewController.swift */,
+				547AA4F4255D81C800EDEF9D /* EntryViewController.swift */,
 				547430E0255AC90700CB2A03 /* ViewController.swift */,
 			);
 			path = Controller;
@@ -233,7 +239,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				547430E1255AC90700CB2A03 /* ViewController.swift in Sources */,
+				547AA4F5255D81C800EDEF9D /* EntryViewController.swift in Sources */,
 				547430DD255AC90700CB2A03 /* AppDelegate.swift in Sources */,
+				547AA4F8255D81E400EDEF9D /* DetailViewController.swift in Sources */,
 				547430E7255AC90700CB2A03 /* ToDoIt.xcdatamodeld in Sources */,
 				547430DF255AC90700CB2A03 /* SceneDelegate.swift in Sources */,
 			);
